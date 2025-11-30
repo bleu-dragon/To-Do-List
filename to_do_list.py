@@ -49,6 +49,10 @@ print ("__To Do List__\n")
 while True:
     person_choice = input('please enter youer choice:\n1-Add task\n2-get task\n3-countdown timer\ntype "esc" to exit\n>')
     person_choice = person_choice.strip().lower()
+    while person_choice == '':
+        print('\nyour choice cannot be empty!')
+        person_choice = input('\nplease enter youer choice:\n1-Add task\n2-get task\n3-countdown timer\ntype "esc" to exit\n>')
+        person_choice = person_choice.strip().lower()        
     if person_choice == "esc" :
         break
     person_choice_number = int(person_choice)
