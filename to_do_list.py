@@ -20,8 +20,9 @@ def add_task () :
         "task" : task,
         "priority" : priority
     })
+    print (f'\nTask "{task}" added successfully :)\n\n')
     return tasks
-    print (f'Task "{task}" added successfully :)\n\n')
+
 
 #تابع get_task
 def get_tasks () :
@@ -53,7 +54,6 @@ while True:
     person_choice_number = int(person_choice)
     if person_choice_number == 1 :
         add_task()
-        get_tasks()
     if person_choice_number == 2 :
         get_tasks()
     if person_choice_number == 3 :
