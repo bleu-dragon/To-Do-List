@@ -20,6 +20,7 @@ def add_task () :
         "task" : task,
         "priority" : priority
     })
+    return tasks
     print (f'Task "{task}" added successfully :)\n\n')
 
 #تابع get_task
