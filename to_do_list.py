@@ -45,14 +45,16 @@ def countdown_timer(minutes):
 #نمایش
 print ("__To Do List__\n")
 while True:
-    person_choice = int(input('please enter youer choice:\n1-Add task\n2-get task\n3-countdown timer\ntype "esc" to exit\n>'))
-    if person_choice == 1 :
-        add_task()
-        get_tasks()
-    if person_choice == 2 :
-        get_tasks()
-    if person_choice == 3 :
-        time = int(input("\nEnter Your desired time:\n>"))
-        countdown_timer(time)
+    person_choice = input('please enter youer choice:\n1-Add task\n2-get task\n3-countdown timer\ntype "esc" to exit\n>')
+    person_choice = person_choice.strip().lower()
     if person_choice == "esc" :
         break
+    person_choice_number = int(person_choice)
+    if person_choice_number == 1 :
+        add_task()
+        get_tasks()
+    if person_choice_number == 2 :
+        get_tasks()
+    if person_choice_number == 3 :
+        time = int(input("\nEnter Your desired time:\n>"))
+        countdown_timer(time)
